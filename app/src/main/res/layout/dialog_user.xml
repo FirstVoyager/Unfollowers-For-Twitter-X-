@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_bottom_sheet">
+
+
+    <View
+        android:layout_marginTop="@dimen/bottom_sheet_item_margin_top"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bottom_sheet_top_shape"
+        android:layout_width="@dimen/bottom_sheet_top_shape_width"
+        android:layout_height="@dimen/bottom_sheet_top_shape_height"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:layout_margin="@dimen/bottom_sheet_item_margin_top"
+        android:text="@string/profile"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/color_divider"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <LinearLayout
+                app:layout_scrollFlags="scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:contentDescription="@string/header"
+                    android:id="@+id/imageView_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_header"
+                    android:background="@color/colorBackHaeder"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:contentDescription="@string/avatar"
+                    android:id="@+id/imageView_avatar"
+                    android:layout_width="@dimen/height_avatar"
+                    android:layout_height="@dimen/height_avatar"
+                    android:layout_marginTop="-35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/icon_main"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="15sp"
+                    android:text="@string/three_dash" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/text_view_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/three_dash" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textView_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three_dash"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textView_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/three_dash"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textView_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/three_dash"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:visibility="gone"
+                    android:id="@+id/textView_typeFollow"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/type_follow"
+                    android:padding="4dp"
+                    android:text="@string/three_dash"
+                    android:textColor="#395CE6" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            tools:listitem="@layout/item_tweet"
+            android:nestedScrollingEnabled="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/progress"/>
+
+        <View
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

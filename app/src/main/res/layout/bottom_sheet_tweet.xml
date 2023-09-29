@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_marginTop="@dimen/bottom_sheet_item_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bottom_sheet_top_shape"
+            android:layout_width="@dimen/bottom_sheet_top_shape_width"
+            android:layout_height="@dimen/bottom_sheet_top_shape_height"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_margin="@dimen/bottom_sheet_item_margin_top"
+            android:text="@string/new_tweet"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/color_divider"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            tools:progress="50"
+            android:max="280"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_bar_height"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/what_s_happening"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/edit_text_tweet_padding"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:id="@+id/editText_tweet"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tweet_button_margin"
+                android:layout_width="@dimen/height_progress_bar"
+                android:layout_height="@dimen/height_progress_bar"
+                android:id="@+id/progressBar_tweet"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tweet"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#1E88E5"
+                android:gravity="center"
+                android:layout_margin="@dimen/tweet_button_margin"
+                android:id="@+id/button_tweet"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+</FrameLayout>

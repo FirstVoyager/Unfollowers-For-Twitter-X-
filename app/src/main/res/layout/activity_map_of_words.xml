@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.MapOfWordsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adUnitId="@string/ads_banner"
+            ads:adSize="BANNER"
+            android:id="@+id/adView"/>
+
+        <com.anychart.AnyChartView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chartView"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/progress"/>
+
+</FrameLayout>

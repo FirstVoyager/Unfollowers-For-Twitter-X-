@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/user_seeOnTwitter"
+        android:title="@string/t_see_on_twitter"
+        android:icon="@drawable/ic_remove_red_eye_black_24dp"/>
+
+    <item
+        android:id="@+id/user_whiteList"
+        android:title="@string/white_list"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"/>
+
+    <item
+        android:id="@+id/user_blackList"
+        android:title="@string/black_list"
+        android:icon="@drawable/playlist_remove"/>
+
+    <item
+        android:id="@+id/user_block"
+        android:title="@string/t_block"
+        android:icon="@drawable/ic_block_black_24dp"/>
+
+
+    <item
+        android:id="@+id/user_mute"
+        android:title="@string/t_mute"
+        android:icon="@drawable/ic_volume_down_black_24dp"/>
+
+    <item
+        android:id="@+id/user_share"
+        android:title="@string/share"
+        android:icon="@drawable/ic_share_black_24dp"/>
+
+
+</menu>

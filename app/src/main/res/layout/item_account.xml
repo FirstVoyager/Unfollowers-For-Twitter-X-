@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="?attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:contentDescription="@string/avatar"
+        android:layout_width="@dimen/avatar_height"
+        android:layout_height="@dimen/avatar_height"
+        android:src="@drawable/icon_main"
+        android:id="@+id/imageView_avatar"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/name"
+            android:id="@+id/textView_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:text="@string/screen_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:id="@+id/text_view_screen"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/view_main"
+        android:background="@drawable/shape_circle"/>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardBackgroundColor="@android:color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/radius_card_progress"
+    app:cardElevation="@dimen/elvation_card_progress"
+    android:id="@+id/progress">
+
+    <LinearLayout
+        android:padding="@dimen/progress_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ProgressBar
+            android:indeterminateTint="@android:color/white"
+            android:layout_width="@dimen/height_progress_bar"
+            android:layout_height="@dimen/height_progress_bar" />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginTop="4dp"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_wait"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

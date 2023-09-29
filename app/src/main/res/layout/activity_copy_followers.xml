@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CopyFollowersActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/ads_banner"
+        android:id="@+id/adView"/>
+
+    <EditText
+        android:hint="@string/t_user_name"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:lines="1" />
+
+    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="@dimen/height_progress_bar"
+                android:layout_height="@dimen/height_progress_bar"
+                android:visibility="invisible"
+                android:id="@+id/progressBar_followers"/>
+
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/followers"
+                android:id="@+id/button_followers"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="@dimen/height_progress_bar"
+                android:layout_height="@dimen/height_progress_bar"
+                android:visibility="invisible"
+                android:id="@+id/progressBar_following"/>
+
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/following"
+                android:id="@+id/button_following"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_user"
+        android:id="@+id/recyclerView"/>
+
+</LinearLayout>

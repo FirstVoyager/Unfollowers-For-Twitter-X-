@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:visible="false"
+        android:title="@string/t_block"
+        android:id="@+id/user_block"/>
+
+    <item
+        android:title="@string/share"
+        android:id="@+id/user_share"/>
+
+    <item
+        android:visible="false"
+        android:title="@string/t_mute"
+        android:id="@+id/user_mute"/>
+
+    <item
+        android:visible="false"
+        android:title="@string/t_see_on_twitter"
+        android:id="@+id/user_see"/>
+
+    <item
+        android:visible="false"
+        android:title="@string/t_unfollow"
+        android:id="@+id/user_unfollow"/>
+
+    <item
+        android:visible="false"
+        android:title="@string/t_follow_back"
+        android:id="@+id/user_follow_back"/>
+
+</menu>

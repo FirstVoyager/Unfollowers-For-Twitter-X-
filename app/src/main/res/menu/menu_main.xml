@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:title="@string/refresh"
+        android:id="@+id/menu_refresh"
+        android:iconTint="@android:color/black"
+        android:icon="@drawable/ic_refresh_black_24dp"/>
+
+    <item
+        android:title="@string/logout"
+        android:id="@+id/menu_logOut"/>
+
+    <item
+        android:title="@string/follow_us"
+        android:id="@+id/menu_followUs"/>
+
+    <item
+        android:title="@string/exit"
+        android:id="@+id/menu_exit"/>
+
+</menu>

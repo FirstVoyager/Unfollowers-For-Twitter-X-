@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/pro_card_padding">
+
+    <View
+        android:layout_marginTop="@dimen/bottom_sheet_item_margin_top"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bottom_sheet_top_shape"
+        android:layout_width="@dimen/bottom_sheet_top_shape_width"
+        android:layout_height="@dimen/bottom_sheet_top_shape_height"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:layout_margin="@dimen/bottom_sheet_item_margin_top"
+        android:text="@string/magic_tools"/>
+
+    <View
+        android:layout_marginBottom="@dimen/bottom_sheet_item_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/color_divider"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_dateOfTweet"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_dateOfTweet"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_date_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/t_date_of_tweets"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_topFriends"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_topFriends"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_top_friends_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/top_friends"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_searchUser"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_searchUser"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_search_user_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/search_users"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_copyFollowers"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_copyFollowers"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_copy_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/copy_followers"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_searchTweet"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_searchTweet"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_search_tweet_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/search_tweet_for_a_user"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_randomUser"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_randomUser"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_random_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/random_user"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/pro_card_padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_timeLine"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imageView_timeLine"
+            android:contentDescription="@string/icon"
+            android:layout_marginStart="@dimen/item_menu_margin"
+            android:layout_width="@dimen/item_menu_height"
+            android:layout_height="@dimen/item_menu_height"
+            tools:src="@drawable/ic_timeline_512dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/time_line"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/item_menu_margin"/>
+
+    </LinearLayout>
+
+</LinearLayout>
